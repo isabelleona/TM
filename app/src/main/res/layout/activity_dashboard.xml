@@ -5,21 +5,69 @@
     android:id="@+id/logout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity">
+    tools:context=".DashboardActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/db2">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/db"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="145dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log out"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="69dp" />
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/mail"
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        android:text="email"
+        android:textColor="#ffffff"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="77dp" />
+
+    <Button
+        android:id="@+id/mission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="email"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="77dp" />
+        android:text="Add Mission"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="321dp"
+        android:layout_height="42dp"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:text="No Missions yet"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="409dp"
+        android:layout_height="460dp"
+        android:visibility="invisible"
+        android:paddingTop="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="274dp"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
